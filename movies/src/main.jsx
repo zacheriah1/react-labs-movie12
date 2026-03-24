@@ -3,12 +3,12 @@ import { createRoot } from "react-dom/client";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
-import SiteHeader from './components/siteHeader'
+import SiteHeader from './components/siteHeader';
 
 
 const App = () => {
   return (
-        <BrowserRouter>
+            <BrowserRouter>
       <SiteHeader />
       <Routes>
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="*" element={ <Navigate to="/" /> } />
       </Routes>
     </BrowserRouter>
+
 
   );
 };
