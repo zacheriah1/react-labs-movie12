@@ -6,6 +6,7 @@ import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 import SiteHeader from './components/siteHeader';
 
 
+
 const App = () => {
   return (
             <BrowserRouter>
