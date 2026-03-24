@@ -1,3 +1,6 @@
+import { Link } from "react-router";
+import Avatar from '@mui/material/Avatar';
+
 import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -15,9 +18,29 @@ import img from '../../images/film-poster-placeholder.png'
 
 export default function MovieCard(props) {
   const movie = props.movie;
+
+    const handleAddToFavorite = (e) => {
+    e.preventDefault();
+    props.selectFavorite(movie.id);
+  };
+
   return (
     <Card>
-      <CardHeader title={movie.title} sx={{ textWrap: "nowrap"}}/>
+         <CardHeader
+        avatar={
+          movie.favorite ? (
+            <Avatar sx={{ backgroundColor: 'red' }}>
+              <FavoriteIcon />
+            </Avatar>
+          ) : null
+        }
+        title={
+          <Typography variant="h5" component="p">
+            {movie.title}{" "}
+          </Typography>
+        }
+      />
+
       <CardMedia
         sx={{ height: 500 }}
         image={
