@@ -4,12 +4,15 @@ import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 import SiteHeader from './components/siteHeader';
+import { BrowserRouter, Route, Navigate, Routes } from "react-router";
+import MovieReviewPage from "./pages/movieReviewPage";
+
 
 
 
 const App = () => {
   return (
-            <BrowserRouter>
+         <BrowserRouter>
       <SiteHeader />
       <Routes>
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
@@ -19,6 +22,7 @@ const App = () => {
         <Route path="*" element={ <Navigate to="/" /> } />
       </Routes>
     </BrowserRouter>
+
 
 
   );
