@@ -10,9 +10,10 @@ import MovieReviewPage from "./pages/movieReviewPage";
 
 
 
+
 const App = () => {
   return (
-         <BrowserRouter>
+             <BrowserRouter>
       <SiteHeader />
       <Routes>
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
