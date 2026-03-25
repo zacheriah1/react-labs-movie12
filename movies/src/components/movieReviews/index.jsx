@@ -54,4 +54,4 @@ export default function MovieReviews({ movie }) {
       </Table>
     </TableContainer>
   );
-}
+};
